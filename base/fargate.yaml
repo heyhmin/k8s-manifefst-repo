@@ -1,0 +1,14 @@
+# eks-demo-fargate-profile.yaml
+---
+apiVersion: eksctl.io/v1alpha5
+kind: ClusterConfig
+metadata:
+  name: eks-demo
+  region: ap-northeast-2        # ${AWS_REGION}
+fargateProfiles:
+  - name: goormi-fargate-profile
+    selectors:
+      - namespace: default
+        labels:
+          app: goormi-fargate
+
