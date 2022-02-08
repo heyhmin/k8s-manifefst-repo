@@ -26,15 +26,3 @@ spec:
               cpu: 250m           #####
             limits:     	      #####
               cpu: 500m           #####
-          volumeMounts:
-          - name: mysecret2
-            mountPath: "/mnt/secrets-store"
-            readOnly: true
-      volumes:
-      - name: mysecret2
-        csi:
-          driver: secrets-store.csi.k8s.io
-          readOnly: true
-          volumeAttributes:
-            secretProviderClass: "aws-secrets"
-
