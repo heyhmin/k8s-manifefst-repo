@@ -29,9 +29,9 @@ jobs:
           framework: kubernetes
           check: CKV_K8S_17
 
-      - name: Install ArgoCD and execute Sync in ArgoCD
-        run: |
-          curl -sSL -o /usr/local/bin/argocd https://github.com/argoproj/argo-cd/releases/latest/download/argocd-linux-amd64
-          chmod +x /usr/local/bin/argocd
-          ARGO_SERVER=a78e6ce0077804291b2d2fad741aab57-146919046.ap-northeast-2.elb.amazonaws.com
-          argocd app sync eksworkshop-cd-pipelin --auth-token ${{ secrets.ARGOCD_TOKEN }} --server $ARGO_SERVER --insecure
+      # - name: Install ArgoCD and execute Sync in ArgoCD
+      #   run: |
+      #     curl -sSL -o /usr/local/bin/argocd https://github.com/argoproj/argo-cd/releases/latest/download/argocd-linux-amd64
+      #     chmod +x /usr/local/bin/argocd
+      #     ARGO_SERVER=a78e6ce0077804291b2d2fad741aab57-146919046.ap-northeast-2.elb.amazonaws.com
+      #     argocd app sync eksworkshop-cd-pipelin --auth-token ${{ secrets.ARGOCD_TOKEN }} --server $ARGO_SERVER --insecure
