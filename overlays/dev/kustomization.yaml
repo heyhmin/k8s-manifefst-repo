@@ -6,7 +6,7 @@ images:
   newTag: goormi
 - name: 454457097752.dkr.ecr.ap-northeast-2.amazonaws.com/goormi_web
   newName: 454457097752.dkr.ecr.ap-northeast-2.amazonaws.com/goormi_web
-  newTag: 4d85ab6f
+  newTag: da1ac0bf
 resources:
 - ../../base
 patchesStrategicMerge:
